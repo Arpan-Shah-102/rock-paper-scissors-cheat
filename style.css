@@ -1,0 +1,185 @@
+/* !@#$%^&*() */
+/* 1234567890 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  margin: 20px;
+  color: #002d3e;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #002d3e;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #002d3e;
+    color: #ffffff;
+  }
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  &:disabled {
+    background-color: #cccccc;
+    border-color: #999999;
+    color: #666666;
+    opacity: 0.6;
+    cursor: not-allowed;
+    &:active {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+.game-btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-size: 48px;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  &:active {
+    transform: scale(0.9) rotate(-10deg);
+    box-shadow: none;
+  }
+  &:disabled {
+    opacity: 0.5;
+    background-color: transparent;
+    cursor: not-allowed;
+    &:hover {
+      transform: none;
+      text-shadow: none;
+    }
+    &:active {
+      transform: none;
+    }
+
+  }
+}
+
+.flex-thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.screen {
+  background-color: #ffffff;
+  border: 2px solid #002d3e;
+  border-radius: 12px;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.result {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #002d3e;
+  display: flex;
+  gap: 20px;
+}
+
+.sound-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: larger;
+  color: #002d3e;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+.how-to-play {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: larger;
+  color: #002d3e;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    color: #005f7a;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+.tutorial {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 2px solid #002d3e;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+
+  & > p {
+    position: relative;
+    margin-bottom: -30px;
+    color: #002d3e;
+    line-height: 1.4;
+    top: -30px;
+  }
+}
+.close-tut {
+  position: relative;
+  top: -20px;
+  left: -15px;
+  font-size: 24px;
+  color: darkred;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: red;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}

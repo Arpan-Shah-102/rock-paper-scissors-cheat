@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Cheat!</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/rock-paper-scissors.png">
+  </head>
+
+  <body>
+    <h1>Rock Paper Scissors Cheat!</h1>
+    <div>
+      <div class="play flex-thing">
+        <h2 class="screen">Play</h2>
+        <div>
+          <button class="rock game-btn">🪨</button>
+          <button class="paper game-btn">📄</button>
+          <button class="scissors game-btn">✂️</button>
+        </div>
+        <div class="result">
+          <p>Wins: <span class="wins-game stat-display">0</span></p>
+          <p>Ties: <span class="ties-game stat-display">0</span></p>
+          <p>Losses: <span class="losses-game stat-display">0</span></p>
+        </div>
+      </div>
+      <!-- 1234567890 -->
+      <div class="stats flex-thing">
+        <div>
+          <abbr title="The AI let you win more"><button disabled class="kind game-option">Kind</button></abbr>
+          <abbr title="The AI played normally"><button disabled class="normal game-option">Normal</button></abbr>
+          <abbr title="The AI cheated"><button disabled class="cheat game-option">Cheater</button></abbr>  
+        </div>
+        <div class="result">
+          <p>Correct: <span class="correct-guess">0</span></p>
+          <p>Wrong: <span class="wrong-guess">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <p class="how-to-play">?</p>
+    <p class="sound-toggle">🔊</p>
+    <div class="tutorial">
+      <h1 class="close-tut">X</h1>
+      <p>Click on one of the 🪨 📄 ✂️ icons to play. The goal is to guess if the AI is cheating, playing normal, or letting you win. The game picks a random AI every round. Good luck!</p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
